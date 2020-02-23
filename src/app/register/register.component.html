@@ -1,0 +1,16 @@
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <div class="fadeIn first">
+      <h3>Register</h3>
+    </div>
+    <form [formGroup]='registerForm' (ngSubmit)="submit()">
+      <input type="text" id="email" class="fadeIn second" name="login" placeholder="email" formControlName="email">
+      <input type="password" id="password" class="fadeIn third" name="pwd" placeholder="password"
+        formControlName="password">
+      <input type="submit" class="fadeIn fourth" value="Register">
+      <input type="button" class="fadeIn fourth col-6" [routerLink]="['/login']" value="Login">
+    </form>
+    <div id="formFooter">
+    </div>
+  </div>
+</div>

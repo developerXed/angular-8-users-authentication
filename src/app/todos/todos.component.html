@@ -1,0 +1,27 @@
+<app-tab-selector></app-tab-selector>
+<div class="page-content page-container" id="page-content">
+  <div class="padding">
+    <div class="row container d-flex justify-content-center">
+      <div class="col-lg-12">
+        <div class="card px-3" [formGroup]='todosForm'>
+          <div class="card-body">
+            <h4 class="card-title"> Todo list</h4>
+            <div class="add-items d-flex"><input type="text" class="form-control todo-list-input"
+                placeholder="Type your task" formControlName="text">
+              <button (click)="submit()" class="add btn btn-primary font-weight-bold todo-list-add-btn">Add
+              </button>
+            </div>
+            <div class="list-wrapper">
+              <ul class="d-flex flex-column-reverse todo-list">
+                <li *ngFor="let data of todos">
+                  <div class="form-check"><label class="form-check-label"> <input class="checkbox" type="checkbox">
+                      {{data.text}} <i class="input-helper"></i></label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
