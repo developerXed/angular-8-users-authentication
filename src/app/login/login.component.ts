@@ -33,6 +33,7 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
+    console.log('testbrach');
     if (this.loginForm.invalid) {
       if (this.loginForm.value.email.length === 0 || this.loginForm.value.password.length === 0) {
         Swal.fire(
